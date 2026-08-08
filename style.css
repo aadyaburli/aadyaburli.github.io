@@ -1,37 +1,187 @@
- {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ============================================
+   base site styles — industrial / apple aesthetic
+   grey background, sleek sans-serif, monospace
+   labels for the "industrial" detail
+   ============================================ */
+
+:root {
+  --bg: #e4e4e6;          /* page background — brushed grey */
+  --panel: #f5f5f7;       /* card / panel surface — apple grey-white */
+  --border: #d2d2d6;      /* hairline borders */
+  --text-primary: #1d1d1f;
+  --text-secondary: #6e6e73;
+  --text-muted: #9a9a9e;
+  --rivet: #b8b8bc;
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Menlo", "Consolas", monospace;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.5;
 }
 
-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 3rem;
-    text-align: center;
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 28px 24px 80px;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+/* top bar — the "nameplate" strip */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+  margin-bottom: 22px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  text-transform: uppercase;
 }
 
-section {
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+.topbar a {
+  color: var(--text-muted);
+  text-decoration: none;
 }
 
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+.topbar a:hover {
+  color: var(--text-secondary);
+}
+
+/* hero panel */
+.hero {
+  background: var(--panel);
+  border: 0.5px solid var(--border);
+  border-radius: 14px;
+  padding: 32px 28px;
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.hero p {
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* entry grid on the homepage */
+.entry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.entry-card {
+  position: relative;
+  background: var(--panel);
+  border: 0.5px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 14px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: border-color 0.15s ease;
+}
+
+.entry-card:hover {
+  border-color: #b0b0b5;
+}
+
+/* rivet dots — the little signature detail in each corner */
+.entry-card::before,
+.entry-card::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--rivet);
+}
+
+.entry-card::before { left: 8px; }
+.entry-card::after { right: 8px; }
+
+.entry-card .tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.entry-card .title {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.entry-card .desc {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+/* single entry page */
+.entry-page {
+  background: var(--panel);
+  border: 0.5px solid var(--border);
+  border-radius: 14px;
+  padding: 32px 28px;
+}
+
+.entry-page .tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.entry-page h1 {
+  margin: 0 0 4px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.entry-page .date {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.entry-page .body {
+  font-size: 15px;
+  color: var(--text-primary);
+}
+
+.entry-page .body p {
+  margin: 0 0 14px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 24px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: var(--text-primary);
 }
