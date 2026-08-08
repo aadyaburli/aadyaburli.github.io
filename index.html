@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aadya Burli - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>aadya — personal log</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>Aadya</h1>
-        <p>Welcome to my portfolio</p>
-    </header>
-    
-    <section class="about">
-        <h2>About Me</h2>
-        <p></p>
-    </section>
-    
-    <section class="projects">
-        <h2>My Projects</h2>
-        <ul>
-            <li><a href="#">Project 1</a></li>
-            <li><a href="#">Project 2</a></li>
-        </ul>
-    </section>
-    
-    <footer>
-        <p>&copy; 2026 Your Name. All rights reserved.</p>
-    </footer>
+  <div class="wrap">
+
+    <div class="topbar">
+      <span>aadya — personal log</span>
+      <span>rev.01 / ann arbor</span>
+    </div>
+
+    <div class="hero">
+      <h1>aadya</h1>
+      <p>design, learning, and the in-between — documented as it happens</p>
+    </div>
+
+    <!--
+      entry grid.
+      to add a new entry:
+      1. copy entries/entry-template.html to entries/entry-00X.html and fill it in
+      2. add a new <a class="entry-card"> block below, newest at the top
+    -->
+    <div class="entry-grid">
+
+      <a class="entry-card" href="entries/entry-001.html">
+        <div class="tag">entry 001</div>
+        <div class="title">site launch</div>
+        <div class="desc">why i built this</div>
+      </a>
+
+    </div>
+
+  </div>
 </body>
 </html>
+
