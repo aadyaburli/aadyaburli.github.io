@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" fill="none" role="img" aria-label="process diagram">
+  <!-- reusable process / flow style for entry body art -->
+  <rect x="8" y="36" width="72" height="48" rx="6" stroke="#d2d2d6" stroke-width="1" fill="#f5f5f7"/>
+  <rect x="124" y="36" width="72" height="48" rx="6" stroke="#d2d2d6" stroke-width="1" fill="#f5f5f7"/>
+  <rect x="240" y="36" width="72" height="48" rx="6" stroke="#d2d2d6" stroke-width="1" fill="#f5f5f7"/>
+
+  <!-- node labels as line blocks (no text  keep portable) -->
+  <path d="M22 54H66M22 62H54" stroke="#9a9a9e" stroke-width="1.25" stroke-linecap="square"/>
+  <path d="M138 54H182M138 62H170" stroke="#9a9a9e" stroke-width="1.25" stroke-linecap="square"/>
+  <path d="M254 54H298M254 62H286" stroke="#9a9a9e" stroke-width="1.25" stroke-linecap="square"/>
+
+  <!-- rivets -->
+  <circle cx="16" cy="44" r="1.5" fill="#b8b8bc"/>
+  <circle cx="72" cy="44" r="1.5" fill="#b8b8bc"/>
+  <circle cx="132" cy="44" r="1.5" fill="#b8b8bc"/>
+  <circle cx="188" cy="44" r="1.5" fill="#b8b8bc"/>
+  <circle cx="248" cy="44" r="1.5" fill="#b8b8bc"/>
+  <circle cx="304" cy="44" r="1.5" fill="#b8b8bc"/>
+
+  <!-- connectors -->
+  <path d="M80 60H124" stroke="#9a9a9e" stroke-width="1" stroke-linecap="square"/>
+  <path d="M196 60H240" stroke="#9a9a9e" stroke-width="1" stroke-linecap="square"/>
+  <path d="M116 56L124 60L116 64" stroke="#9a9a9e" stroke-width="1" stroke-linejoin="miter" fill="none"/>
+  <path d="M232 56L240 60L232 64" stroke="#9a9a9e" stroke-width="1" stroke-linejoin="miter" fill="none"/>
+</svg>

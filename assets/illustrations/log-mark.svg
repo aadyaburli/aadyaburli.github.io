@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 24" fill="none" role="img" aria-label="log mark">
+  <!-- small nameplate / log mark for headers -->
+  <rect x="1" y="1" width="62" height="22" rx="2" stroke="#d2d2d6" stroke-width="1"/>
+  <circle cx="10" cy="12" r="2.5" stroke="#9a9a9e" stroke-width="0.75"/>
+  <circle cx="10" cy="12" r="0.9" fill="#b8b8bc"/>
+  <path d="M18 8H46M18 12H40M18 16H36" stroke="#9a9a9e" stroke-width="1" stroke-linecap="square"/>
+  <rect x="52" y="7" width="5" height="10" rx="0.5" stroke="#b8b8bc" stroke-width="0.75"/>
+</svg>
