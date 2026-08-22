@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="entry-desc" content="10k + priority list" />
-  <title>1. — aadya</title>
+  <!-- shown on the homepage card; keep it short -->
+  <meta name="entry-desc" content="{{DESC}}" />
+  <title>{{TITLE}} — aadya</title>
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
@@ -12,20 +13,18 @@
 
     <div class="topbar">
       <a href="../index.html">aadya — personal log</a>
-      <span>entry 002</span>
+      <span>entry {{NUM}}</span>
     </div>
 
     <div class="entry-page">
-      <div class="tag">entry 002</div>
-  
-      <h1>1.</h1>
-      <div class="date">august 2026</div>
+      <div class="tag">entry {{NUM}}</div>
+      <h1>{{TITLE}}</h1>
+      <div class="date">{{DATE}}</div>
 
       <div class="body">
         <p>
-          i did my 10k today and made a priority list for better efficiency.
+          write the entry here.
         </p>
-      
       </div>
     </div>
 

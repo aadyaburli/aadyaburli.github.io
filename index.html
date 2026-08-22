@@ -20,13 +20,15 @@
     </div>
 
     <!--
-      entry grid.
-      to add a new entry:
-      1. copy entries/entry-template.html to entries/entry-00X.html and fill it in
-      2. add a new <a class="entry-card"> block below, newest at the top
+      entry grid — rebuilt from entries/entry-*.html by scripts/new-entry.py
+      easy:   python3 scripts/new-entry.py --title "heading" --desc "card blurb"
+      then edit the new page. after rewriting a title/blurb:
+              python3 scripts/new-entry.py --sync
+      manual: copy entries/entry-template.html → entries/entry-00X.html, fill it in,
+              then run --sync so the homepage picks it up
     -->
     <div class="entry-grid">
-
+      <!-- entry-grid:start -->
       <a class="entry-card" href="entries/entry-002.html">
         <div class="tag">entry 002</div>
         <div class="title">1.</div>
@@ -37,8 +39,8 @@
         <div class="tag">entry 001</div>
         <div class="title">site launch</div>
         <div class="desc">why i built this</div>
-        
       </a>
+      <!-- entry-grid:end -->
     </div>
 
   </div>
