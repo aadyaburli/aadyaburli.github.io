@@ -92,12 +92,21 @@ body {
   color: var(--text-secondary);
 }
 
+.hero,
+.entry-card,
+.entry-page,
+.log-note {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(22px) saturate(170%);
+  -webkit-backdrop-filter: blur(22px) saturate(170%);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow:
+    0 10px 30px rgba(40, 16, 60, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
 /* hero panel */
 .hero {
-  background: rgba(245, 245, 247, 0.48);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 0.5px solid var(--border);
   border-radius: 14px;
   padding: 32px 28px;
   margin-bottom: 16px;
@@ -139,20 +148,17 @@ body {
 
 .entry-card {
   position: relative;
-  background: rgba(245, 245, 247, 0.48);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 0.5px solid var(--border);
   border-radius: 10px;
   padding: 16px 14px;
   text-decoration: none;
   color: inherit;
   display: block;
-  transition: border-color 0.15s ease;
+  transition: background 0.15s ease, border-color 0.15s ease;
 }
 
 .entry-card:hover {
-  border-color: #b0b0b5;
+  background: rgba(255, 255, 255, 0.32);
+  border-color: rgba(255, 255, 255, 0.8);
 }
 
 /* rivet dots — the little signature detail in each corner */
@@ -190,10 +196,6 @@ body {
 
 /* single entry page */
 .entry-page {
-  background: rgba(245, 245, 247, 0.48);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 0.5px solid var(--border);
   border-radius: 14px;
   padding: 32px 28px;
 }
@@ -248,10 +250,6 @@ body {
 }
 
 .log-note {
-  background: rgba(245, 245, 247, 0.48);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 0.5px solid var(--border);
   border-radius: 14px;
   padding: 24px 26px;
 }
