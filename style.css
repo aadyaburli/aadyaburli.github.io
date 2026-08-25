@@ -34,13 +34,12 @@ body {
   color: var(--text-primary);
   font-family: var(--font-sans);
   line-height: 1.5;
-  isolation: isolate;
 }
 
 .site-bg {
   position: fixed;
   inset: 0;
-  z-index: -1;
+  z-index: 0;
   overflow: hidden;
   pointer-events: none;
 }
@@ -57,7 +56,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(228, 228, 230, 0.12);
+  background: rgba(18, 8, 28, 0.18);
 }
 
 .wrap {
@@ -95,7 +94,7 @@ body {
 
 /* hero panel */
 .hero {
-  background: rgba(245, 245, 247, 0.62);
+  background: rgba(245, 245, 247, 0.48);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 0.5px solid var(--border);
@@ -140,7 +139,7 @@ body {
 
 .entry-card {
   position: relative;
-  background: rgba(245, 245, 247, 0.62);
+  background: rgba(245, 245, 247, 0.48);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 0.5px solid var(--border);
@@ -191,7 +190,7 @@ body {
 
 /* single entry page */
 .entry-page {
-  background: rgba(245, 245, 247, 0.62);
+  background: rgba(245, 245, 247, 0.48);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 0.5px solid var(--border);
@@ -249,7 +248,7 @@ body {
 }
 
 .log-note {
-  background: rgba(245, 245, 247, 0.62);
+  background: rgba(245, 245, 247, 0.48);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 0.5px solid var(--border);
