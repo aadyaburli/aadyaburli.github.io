@@ -88,6 +88,19 @@ body {
   color: var(--text-secondary);
 }
 
+.section-label {
+  margin: 22px 0 10px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.section-label:first-of-type {
+  margin-top: 4px;
+}
+
 /* entry grid on the homepage */
 .entry-grid {
   display: grid;
@@ -190,5 +203,44 @@ body {
 }
 
 .back-link:hover {
+  color: var(--text-primary);
+}
+
+/* learning log notes */
+.log-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.log-note {
+  background: var(--panel);
+  border: 0.5px solid var(--border);
+  border-radius: 14px;
+  padding: 24px 26px;
+}
+
+.log-note .tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.log-note h2 {
+  margin: 0 0 4px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.log-note .date {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
+}
+
+.log-note p {
+  margin: 0;
+  font-size: 15px;
   color: var(--text-primary);
 }
