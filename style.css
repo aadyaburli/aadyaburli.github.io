@@ -19,13 +19,13 @@
 
 * {
   box-sizing: border-box;
-  cursor: url("/assets/fairy-cursor.png") 7 3, auto;
+  cursor: url("/assets/fairy-cursor.png") 5 1, auto;
 }
 
 a,
 .entry-card,
 .back-link {
-  cursor: url("/assets/fairy-cursor.png") 7 3, pointer;
+  cursor: url("/assets/fairy-cursor.png") 5 1, pointer;
 }
 
 body {
