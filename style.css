@@ -21,6 +21,17 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  cursor: url("assets/fairy-cursor.png") 46 17, auto;
+}
+
+a,
+.entry-card,
+.back-link {
+  cursor: url("assets/fairy-cursor.png") 46 17, pointer;
+}
+
 body {
   margin: 0;
   background: var(--bg);
