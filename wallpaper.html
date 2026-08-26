@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wallpaper — aadya</title>
+  <link rel="stylesheet" href="style.css?v=5" />
+</head>
+<body>
+  <div class="site-bg" aria-hidden="true">
+    <video autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback noplaybackrate" poster="/assets/bg-poster.jpg">
+      <source src="/assets/bg.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <div class="wallpaper-page">
+    <div class="topbar">
+      <a href="index.html">aadya — personal log</a>
+      <span>wallpaper</span>
+    </div>
+
+    <aside class="wallpaper-dock">
+      <div class="wallpaper-dock-head">
+        <h1>wallpaper</h1>
+        <button type="button" class="wallpaper-icon-btn" data-wallpaper-shuffle>shuffle</button>
+      </div>
+      <p class="wallpaper-kicker">pick a look for the whole site</p>
+      <p class="wallpaper-current"><span data-wallpaper-name>sparkle</span></p>
+
+      <div class="wallpaper-grid">
+        <button type="button" class="wallpaper-swatch" data-wallpaper="sparkle" aria-label="sparkle">
+          <span class="wallpaper-thumb wallpaper-thumb-sparkle"></span>
+          <span>sparkle</span>
+        </button>
+        <button type="button" class="wallpaper-swatch" data-wallpaper="still" aria-label="still">
+          <span class="wallpaper-thumb wallpaper-thumb-still"></span>
+          <span>still</span>
+        </button>
+        <button type="button" class="wallpaper-swatch" data-wallpaper="dusk" aria-label="dusk">
+          <span class="wallpaper-thumb wallpaper-thumb-dusk"></span>
+          <span>dusk</span>
+        </button>
+        <button type="button" class="wallpaper-swatch" data-wallpaper="mist" aria-label="mist">
+          <span class="wallpaper-thumb wallpaper-thumb-mist"></span>
+          <span>mist</span>
+        </button>
+        <button type="button" class="wallpaper-swatch" data-wallpaper="paper" aria-label="paper">
+          <span class="wallpaper-thumb wallpaper-thumb-paper"></span>
+          <span>paper</span>
+        </button>
+        <button type="button" class="wallpaper-swatch" data-wallpaper="glass" aria-label="tinted glass">
+          <span class="wallpaper-thumb wallpaper-thumb-glass"></span>
+          <span>glass</span>
+        </button>
+      </div>
+    </aside>
+  </div>
+
+  <script src="/assets/bg.js"></script>
+  <script src="/assets/wallpaper.js"></script>
+</body>
+</html>
