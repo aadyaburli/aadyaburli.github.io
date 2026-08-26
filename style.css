@@ -19,7 +19,7 @@
 
 * {
   box-sizing: border-box;
-  cursor: url("/assets/mushroom-cursor.png") 35 1, url("/assets/mushroom-cursor-32.png") 17 1, auto;
+  cursor: url("/assets/halftone-cursor.png") 32 32, url("/assets/halftone-cursor-32.png") 16 16, auto;
 }
 
 a,
@@ -27,7 +27,7 @@ a,
 .back-link,
 .wallpaper-swatch,
 .wallpaper-icon-btn {
-  cursor: url("/assets/mushroom-cursor.png") 35 1, url("/assets/mushroom-cursor-32.png") 17 1, pointer;
+  cursor: url("/assets/halftone-cursor.png") 32 32, url("/assets/halftone-cursor-32.png") 16 16, pointer;
 }
 
 body {
