@@ -586,8 +586,8 @@ body[data-wallpaper="glass"] .site-bg::after {
 }
 
 .side-nav-link svg {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
 }
 
 @media (max-width: 920px) {
