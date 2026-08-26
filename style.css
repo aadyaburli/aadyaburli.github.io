@@ -50,6 +50,19 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  pointer-events: none;
+}
+
+.site-bg video::-webkit-media-controls,
+.site-bg video::-webkit-media-controls-enclosure,
+.site-bg video::-webkit-media-controls-panel,
+.site-bg video::-webkit-media-controls-overlay-play-button,
+.site-bg video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .site-bg::after {
