@@ -26,7 +26,8 @@ a,
 .entry-card,
 .back-link,
 .wallpaper-swatch,
-.wallpaper-icon-btn {
+.wallpaper-icon-btn,
+.side-nav a {
   cursor: url("/assets/bubble-cursor.png") 12 12, url("/assets/bubble-cursor-32.png") 16 16, pointer;
 }
 
@@ -452,5 +453,177 @@ body[data-wallpaper="glass"] .site-bg::after {
     transform: none;
     width: auto;
     margin-top: 40vh;
+  }
+}
+
+/* left icon dock — like a studio sidebar */
+.side-nav {
+  position: fixed;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 58px;
+  padding: 10px 7px 12px;
+  background: rgba(255, 246, 241, 0.88);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 18px;
+  box-shadow:
+    0 12px 30px rgba(80, 30, 50, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.side-nav-stack {
+  position: relative;
+  display: block;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 4px;
+}
+
+.side-nav-stack-back {
+  position: absolute;
+  inset: 0 8px 8px 0;
+  border-radius: 11px;
+  background: url("/assets/bg-spiral.jpg") center / cover no-repeat;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.side-nav-stack-front {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  background: #fff6f1;
+  border-radius: 10px;
+  padding: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.side-nav-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 9px 0 2px;
+  border-top: 1px solid rgba(40, 20, 30, 0.1);
+}
+
+.side-nav-arrows {
+  gap: 2px;
+  padding-top: 8px;
+}
+
+.side-nav-chev {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 22px;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.side-nav-chev.is-off {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.side-nav-tile {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  background: rgba(40, 20, 30, 0.05);
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.side-nav-tile img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.side-nav-tile svg {
+  width: 20px;
+  height: 20px;
+}
+
+.side-nav-tile-wall {
+  background: url("/assets/bg-spiral.jpg") center / cover no-repeat;
+}
+
+.side-nav-tile.is-current {
+  box-shadow: 0 0 0 1.5px rgba(20, 10, 16, 0.28);
+}
+
+.side-nav-face {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: -0.04em;
+  color: var(--text-primary);
+  padding: 4px 0;
+}
+
+.side-nav-link {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  color: var(--text-primary);
+}
+
+.side-nav-link svg {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 920px) {
+  .side-nav {
+    left: 50%;
+    right: auto;
+    top: auto;
+    bottom: 14px;
+    transform: translateX(-50%);
+    flex-direction: row;
+    width: auto;
+    max-width: calc(100vw - 28px);
+    height: 58px;
+    padding: 8px 10px;
+    overflow-x: auto;
+  }
+
+  .side-nav-stack {
+    margin: 0 4px 0 0;
+    flex: 0 0 auto;
+  }
+
+  .side-nav-group {
+    flex-direction: row;
+    width: auto;
+    padding: 0 8px;
+    border-top: 0;
+    border-left: 1px solid rgba(40, 20, 30, 0.1);
+  }
+
+  .side-nav-arrows {
+    padding: 0 8px;
+  }
+
+  .wrap,
+  .wallpaper-page {
+    padding-bottom: 92px;
   }
 }
