@@ -8,9 +8,9 @@
   --bg: #e4e4e6;          /* page background — brushed grey */
   --panel: #f5f5f7;       /* card / panel surface — apple grey-white */
   --border: #d2d2d6;      /* hairline borders */
-  --text-primary: #111111;
-  --text-secondary: #2c2c2e;
-  --text-muted: #3a3a3c;
+  --text-primary: #000000;
+  --text-secondary: #1a1a1a;
+  --text-muted: #222222;
   --rivet: #4a4a4e;
 
   --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Helvetica, Arial, sans-serif;
@@ -82,6 +82,7 @@ body {
   letter-spacing: 0.06em;
   color: var(--text-primary);
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 .topbar a {
@@ -97,7 +98,7 @@ body {
 .entry-card,
 .entry-page,
 .log-note {
-  background: rgba(255, 255, 255, 0.52);
+  background: rgba(255, 255, 255, 0.62);
   backdrop-filter: blur(22px) saturate(170%);
   -webkit-backdrop-filter: blur(22px) saturate(170%);
   border: 1px solid rgba(255, 255, 255, 0.55);
@@ -116,7 +117,7 @@ body {
 .hero h1 {
   margin: 0;
   font-size: 26px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.01em;
 }
 
@@ -133,6 +134,7 @@ body {
   letter-spacing: 0.06em;
   color: var(--text-primary);
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 .section-label:first-of-type {
@@ -185,7 +187,7 @@ body {
 
 .entry-card .title {
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .entry-card .desc {
@@ -210,7 +212,7 @@ body {
 .entry-page h1 {
   margin: 0 0 4px;
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .entry-page .date {
@@ -263,7 +265,7 @@ body {
 .log-note h2 {
   margin: 0 0 4px;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .log-note .date {
@@ -333,7 +335,7 @@ body[data-wallpaper="glass"] .site-bg::after {
   top: 50%;
   transform: translateY(-50%);
   width: min(300px, calc(100vw - 48px));
-  background: rgba(255, 255, 255, 0.52);
+  background: rgba(255, 255, 255, 0.62);
   backdrop-filter: blur(22px) saturate(170%);
   -webkit-backdrop-filter: blur(22px) saturate(170%);
   border: 1px solid rgba(255, 255, 255, 0.55);
@@ -354,7 +356,7 @@ body[data-wallpaper="glass"] .site-bg::after {
 .wallpaper-dock h1 {
   margin: 0;
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .wallpaper-icon-btn {
