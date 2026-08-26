@@ -8,10 +8,10 @@
   --bg: #e4e4e6;          /* page background — brushed grey */
   --panel: #f5f5f7;       /* card / panel surface — apple grey-white */
   --border: #d2d2d6;      /* hairline borders */
-  --text-primary: #1d1d1f;
-  --text-secondary: #6e6e73;
-  --text-muted: #9a9a9e;
-  --rivet: #b8b8bc;
+  --text-primary: #000000;
+  --text-secondary: #1a1a1a;
+  --text-muted: #222222;
+  --rivet: #4a4a4e;
 
   --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Helvetica, Arial, sans-serif;
   --font-mono: ui-monospace, "SF Mono", "Menlo", "Consolas", monospace;
@@ -80,25 +80,25 @@ body {
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.06em;
-  color: var(--text-muted);
+  color: var(--text-primary);
   text-transform: uppercase;
-  text-shadow: 0 1px 8px rgba(255, 255, 255, 0.95);
+  font-weight: 600;
 }
 
 .topbar a {
-  color: var(--text-muted);
+  color: var(--text-primary);
   text-decoration: none;
 }
 
 .topbar a:hover {
-  color: var(--text-secondary);
+  color: #000;
 }
 
 .hero,
 .entry-card,
 .entry-page,
 .log-note {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.62);
   backdrop-filter: blur(22px) saturate(170%);
   -webkit-backdrop-filter: blur(22px) saturate(170%);
   border: 1px solid rgba(255, 255, 255, 0.55);
@@ -117,7 +117,7 @@ body {
 .hero h1 {
   margin: 0;
   font-size: 26px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.01em;
 }
 
@@ -132,9 +132,9 @@ body {
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.06em;
-  color: var(--text-muted);
+  color: var(--text-primary);
   text-transform: uppercase;
-  text-shadow: 0 1px 8px rgba(255, 255, 255, 0.95);
+  font-weight: 600;
 }
 
 .section-label:first-of-type {
@@ -159,7 +159,7 @@ body {
 }
 
 .entry-card:hover {
-  background: rgba(255, 255, 255, 0.32);
+  background: rgba(255, 255, 255, 0.68);
   border-color: rgba(255, 255, 255, 0.8);
 }
 
@@ -187,7 +187,7 @@ body {
 
 .entry-card .title {
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .entry-card .desc {
@@ -212,7 +212,7 @@ body {
 .entry-page h1 {
   margin: 0 0 4px;
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .entry-page .date {
@@ -235,9 +235,8 @@ body {
   margin-top: 24px;
   font-family: var(--font-mono);
   font-size: 12px;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   text-decoration: none;
-  text-shadow: 0 1px 8px rgba(255, 255, 255, 0.95);
 }
 
 .back-link:hover {
@@ -266,7 +265,7 @@ body {
 .log-note h2 {
   margin: 0 0 4px;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .log-note .date {
@@ -336,7 +335,7 @@ body[data-wallpaper="glass"] .site-bg::after {
   top: 50%;
   transform: translateY(-50%);
   width: min(300px, calc(100vw - 48px));
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.62);
   backdrop-filter: blur(22px) saturate(170%);
   -webkit-backdrop-filter: blur(22px) saturate(170%);
   border: 1px solid rgba(255, 255, 255, 0.55);
@@ -357,7 +356,7 @@ body[data-wallpaper="glass"] .site-bg::after {
 .wallpaper-dock h1 {
   margin: 0;
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .wallpaper-icon-btn {
@@ -365,7 +364,7 @@ body[data-wallpaper="glass"] .site-bg::after {
   font-size: 11px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   background: transparent;
   border: 0;
   padding: 0;
@@ -387,7 +386,7 @@ body[data-wallpaper="glass"] .site-bg::after {
   font-size: 11px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--text-primary);
   margin-bottom: 14px;
 }
 
@@ -408,7 +407,7 @@ body[data-wallpaper="glass"] .site-bg::after {
   font-size: 10px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--text-primary);
   text-align: left;
 }
 
