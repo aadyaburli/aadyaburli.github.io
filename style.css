@@ -19,13 +19,13 @@
 
 * {
   box-sizing: border-box;
-  cursor: url("/assets/fairy-cursor.png") 5 1, auto;
+  cursor: url("/assets/mushroom-cursor.png") 35 1, url("/assets/mushroom-cursor-32.png") 17 1, auto;
 }
 
 a,
 .entry-card,
 .back-link {
-  cursor: url("/assets/fairy-cursor.png") 5 1, pointer;
+  cursor: url("/assets/mushroom-cursor.png") 35 1, url("/assets/mushroom-cursor-32.png") 17 1, pointer;
 }
 
 body {
