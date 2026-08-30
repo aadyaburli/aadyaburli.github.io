@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>learning log — aadya</title>
+  <title>journal de français — aadya</title>
   <link rel="stylesheet" href="style.css?v=16" />
 </head>
 <body>
@@ -14,13 +14,13 @@
       <img class="side-nav-stack-front" src="/assets/nav-mushrooms.png" alt="" />
     </a>
     <div class="side-nav-group side-nav-arrows">
-      <a class="side-nav-chev" href="/entries/entry-001.html" aria-label="previous">⌃</a>
-      <a class="side-nav-chev" href="/french.html" aria-label="next">⌄</a>
+      <a class="side-nav-chev" href="/learning.html" aria-label="previous">⌃</a>
+      <a class="side-nav-chev" href="/wallpaper.html" aria-label="next">⌄</a>
     </div>
     <div class="side-nav-group">
       <a class="side-nav-tile" href="/index.html" aria-label="entries" title="entries"><img src="/assets/nav-mushrooms.png" alt="" /></a>
-      <a class="side-nav-tile is-current" href="/learning.html" aria-label="learning log" title="learning log" aria-current="page"><img src="/assets/nav-folder.png" alt="" /></a>
-      <a class="side-nav-tile side-nav-tile-fr" href="/french.html" aria-label="french log" title="french log">fr</a>
+      <a class="side-nav-tile" href="/learning.html" aria-label="learning log" title="learning log"><img src="/assets/nav-folder.png" alt="" /></a>
+      <a class="side-nav-tile side-nav-tile-fr is-current" href="/french.html" aria-label="french log" title="french log" aria-current="page">fr</a>
       <a class="side-nav-tile side-nav-tile-wall" href="/wallpaper.html" aria-label="wallpaper" title="wallpaper"></a>
     </div>
     <div class="side-nav-group">
@@ -37,30 +37,67 @@
     <div class="topbar">
       <a href="index.html">aadya — personal log</a>
       <span class="topbar-links">
-        <span>learning log</span>
-        <a href="french.html">french log</a>
+        <a href="learning.html">learning log</a>
+        <span>french log</span>
         <a href="wallpaper.html">wallpaper</a>
       </span>
     </div>
 
     <div class="hero">
-      <h1>learning log</h1>
-      <p>notes on what i'm figuring out — newest at the top</p>
+      <h1>journal de français</h1>
+      <p>goodnotes pages, vocab, and whatever i'm learning — newest at the top</p>
     </div>
 
     <!--
-      to add a note: copy a .log-note block and paste it at the top of the list
+      to add a GoodNotes page:
+      1. in GoodNotes: share / export the page as PNG
+      2. put the file in assets/french/ (ex: week-01.png)
+      3. copy a .gn-page block below, paste this inside .gn-slot:
+         <img src="/assets/french/week-01.png" alt="goodnotes">
     -->
-    <div class="log-list">
+    <div class="gn-book">
 
-      <article class="log-note">
-        <div class="tag">note 001</div>
-        <h2>started this</h2>
-        <div class="date">august 2026</div>
-        <p>
-          a place for the learning, separate from the personal entries.
-          school, design, building things — whatever i'm in the middle of.
-        </p>
+      <article class="gn-page">
+        <div class="gn-meta">
+          <span>page 01</span>
+          <span>août 2026</span>
+        </div>
+        <div class="gn-paper">
+          <h2>bonjour</h2>
+          <p>a notebook for french — duolingo, class, whatever sticks.</p>
+          <p>export a page from goodnotes as png and drop it in the empty sheets below.</p>
+          <div class="gn-vocab">
+            <div><em>bonjour</em><span>hello</span></div>
+            <div><em>aujourd'hui</em><span>today</span></div>
+            <div><em>j'apprends</em><span>i'm learning</span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="gn-page">
+        <div class="gn-meta">
+          <span>page 02 · goodnotes</span>
+          <span></span>
+        </div>
+        <div class="gn-paper gn-paper-empty">
+          <div class="gn-slot">
+            <!-- <img src="/assets/french/page-02.png" alt="goodnotes"> -->
+            <p class="gn-hint">space for a goodnotes export</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="gn-page">
+        <div class="gn-meta">
+          <span>page 03 · goodnotes</span>
+          <span></span>
+        </div>
+        <div class="gn-paper gn-paper-empty">
+          <div class="gn-slot">
+            <!-- <img src="/assets/french/page-03.png" alt="goodnotes"> -->
+            <p class="gn-hint">another blank sheet</p>
+          </div>
+        </div>
       </article>
 
     </div>
