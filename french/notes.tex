@@ -1,0 +1,335 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french,english]{babel}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{microtype}
+\usepackage{parskip}
+
+\geometry{
+  margin=1.6cm,
+  top=2.1cm,
+  bottom=2.1cm
+}
+
+\definecolor{paper}{HTML}{F6EFE4}
+\definecolor{ink}{HTML}{2A241F}
+\definecolor{ruleline}{HTML}{D8C9B4}
+\definecolor{lavender}{HTML}{C9B8E8}
+\definecolor{plum}{HTML}{6B4A78}
+\definecolor{rose}{HTML}{E8B4C8}
+\definecolor{mint}{HTML}{C8DCC0}
+\definecolor{noteblue}{HTML}{4A6FA5}
+\definecolor{softyellow}{HTML}{F7E7A8}
+
+\pagecolor{paper}
+\color{ink}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\color{plum}\small journal de fran\c{c}ais \quad\textbullet\quad \thepage}
+
+\titleformat{\section}
+  {\Large\bfseries\color{plum}}
+  {}{0pt}{}[\vspace{2pt}{\color{lavender}\titlerule[2pt]}]
+
+\titleformat{\subsection}
+  {\large\bfseries\color{noteblue}}
+  {}{0pt}{}
+
+\tcbset{
+  boxrule=0pt,
+  arc=8pt,
+  left=10pt,
+  right=10pt,
+  top=8pt,
+  bottom=8pt,
+  fonttitle=\bfseries
+}
+
+\newtcolorbox{rulebox}{
+  colback=lavender!35,
+  colframe=plum,
+  title=formule
+}
+
+\newtcolorbox{exbox}{
+  colback=white!70!paper,
+  colframe=rose,
+  boxrule=1pt
+}
+
+\newtcolorbox{enbox}{
+  colback=mint!40,
+  colframe=mint,
+  boxrule=0pt
+}
+
+\newcommand{\pair}[2]{%
+  \item \textbf{#1}\\
+  {\color{noteblue}\textit{#2}}%
+}
+
+\newcommand{\vocab}[2]{%
+  \textbf{#1} {\color{noteblue}\textit{(#2)}}%
+}
+
+\begin{document}
+\selectlanguage{french}
+
+\begin{center}
+  {\color{plum}\LARGE\bfseries C'est, ce sont}\\[4pt]
+  {\color{lavender}\rule{0.55\textwidth}{2.5pt}}\\[6pt]
+  {\small coloriage de notes \textbullet{} goodnotes $\rightarrow$ \LaTeX}
+\end{center}
+
+\vspace{0.6em}
+
+\begin{exbox}
+\begin{itemize}[leftmargin=1.2em,itemsep=0.55em]
+  \pair{Est-ce ta trousse ? --- Oui, c'est la mienne.}
+       {Is this your pencil case? --- Yes, it's mine.}
+  \pair{Ce sont mes livres.}
+       {These are my books. \quad \vocab{livres}{books}}
+  \pair{C'est ma maison.}
+       {This is my house.}
+  \pair{Les ciseaux, c'est pratique.}
+       {\vocab{ciseaux}{scissors}, \vocab{pratique}{practical}}
+  \pair{Et leurs anniversaires ? --- C'est bient\^{o}t.}
+       {\vocab{anniversaires}{birthdays} \quad \vocab{bient\^{o}t}{soon / adverb}}
+\end{itemize}
+\end{exbox}
+
+\begin{rulebox}
+\begin{itemize}[leftmargin=1.2em,itemsep=0.4em]
+  \item \texttt{c'est} + adverbe
+  \item \texttt{ce sont} + adverbe + nom \quad {\small\color{ink}(le nom p\`{e}se plus que l'adverbe)}
+\end{itemize}
+\end{rulebox}
+
+\begin{exbox}
+\begin{itemize}[leftmargin=1.2em,itemsep=0.55em]
+  \pair{Ce sont bient\^{o}t les vacances !}
+       {The holidays are coming soon!}
+  \pair{Ce sont les amis de mon fr\`{e}re.}
+       {These are my brother's friends.}
+  \pair{\`{A} qui sont ces livres ?}
+       {Whose books are these?}
+\end{itemize}
+\end{exbox}
+
+\newpage
+
+\section*{celui, celle, ceux, celles}
+
+\begin{center}
+{\large
+\begin{tabular}{cccc}
+\textbf{celui} & \textbf{celle} & \textbf{ceux} & \textbf{celles}\\
+{\small masc.\ sg.} & {\small f\'{e}m.\ sg.} & {\small masc.\ pl.} & {\small f\'{e}m.\ pl.}
+\end{tabular}}
+\end{center}
+
+\vspace{0.4em}
+
+\begin{exbox}
+\begin{itemize}[leftmargin=1.2em,itemsep=0.55em]
+  \pair{\`{A} qui sont ces balles ? --- Ce sont les miennes.}
+       {Whose balls are these? --- They are mine.}
+  \pair{Eva aime mes biscuits mais d\'{e}teste ceux de sa tante.}
+       {Eva likes my biscuits but hates her aunt's.}
+\end{itemize}
+\end{exbox}
+
+\section*{penser quoi}
+
+\begin{exbox}
+\begin{itemize}[leftmargin=1.2em,itemsep=0.55em]
+  \pair{Oh ! j'ai regard\'{e} \c{c}a aussi hier.}
+       {Oh! I watched that too yesterday.}
+  \pair{Les lasagnes ? J'adore \c{c}a !}
+       {Lasagna? I love it!}
+  \pair{Les probabilit\'{e}s, \c{c}a m'\'{e}nerve !}
+       {Probabilities get on my nerves!}
+\end{itemize}
+\end{exbox}
+
+\section*{c'est beau}
+
+\begin{exbox}
+\begin{itemize}[leftmargin=1.2em,itemsep=0.55em]
+  \pair{C'est beau !}
+       {It's beautiful!}
+  \pair{C'est vraiment beau !}
+       {It's really beautiful!}
+\end{itemize}
+\end{exbox}
+
+\begin{enbox}
+\textbf{d\'{e}range} --- \textit{bothers me}\\[0.3em]
+on fume \`{a} c\^{o}t\'{e} de moi \quad/\quad quand on fume
+\end{enbox}
+
+\vspace{0.5em}
+
+\begin{exbox}
+\begin{itemize}[leftmargin=1.2em,itemsep=0.45em]
+  \item \vocab{tout le monde}{everyone}
+  \item tout le monde a une t\'{e}l\'{e}
+  \item tout le monde est gentil
+\end{itemize}
+\end{exbox}
+
+\newpage
+
+\section*{il y a + nom}
+
+\begin{rulebox}
+\texttt{il y a} + \texttt{du / de la / de l' / des} + nom
+\end{rulebox}
+
+\begin{exbox}
+\begin{itemize}[leftmargin=1.2em,itemsep=0.55em]
+  \pair{Il y a du soleil.}{sunny \quad {\small\color{plum}soleil $\sim$ pomme}}
+  \pair{Il y a du vent.}{windy \quad {\small\color{plum}close the vent}}
+  \pair{Il y a du brouillard.}{foggy}
+  \pair{Il y a de l'orage.}{stormy}
+  \pair{Il y a des nuages.}{cloudy}
+  \pair{Il y a de la pluie aujourd'hui.}{rainy}
+\end{itemize}
+\end{exbox}
+
+\begin{enbox}
+le temps est ensoleill\'{e} \quad --- \quad \textit{it is sunny}\\[0.35em]
+aussi : il fait du soleil \quad/\quad il fait soleil
+\end{enbox}
+
+\section*{\^{e}tre d'accord}
+
+\begin{center}
+{\large \textbf{\^{e}tre} + d'accord \quad {\color{noteblue}\textit{to agree}}}
+\end{center}
+
+\begin{exbox}
+\begin{itemize}[leftmargin=1.2em,itemsep=0.55em]
+  \pair{Je suis compl\`{e}tement d'accord avec toi.}
+       {I completely agree with you.}
+  \pair{Elle est toujours d'accord avec son fr\`{e}re.}
+       {She always agrees with her brother.}
+  \pair{Vous \^{e}tes d'accord ?}
+       {Do you agree?}
+  \pair{Nous sommes d'accord avec votre proposition.}
+       {We agree with your offer. \quad \vocab{sommes}{\^{e}tre}}
+\end{itemize}
+\end{exbox}
+
+\newpage
+
+\section*{je voudrais / je veux}
+
+\begin{exbox}
+\begin{itemize}[leftmargin=1.2em,itemsep=0.55em]
+  \pair{Je veux une glace !}
+       {I want an ice cream.}
+  \pair{Je voudrais un coca, s'il te pla\^{\i}t.}
+       {I would like a coke, please.}
+  \pair{Je veux un c\^{a}lin.}
+       {I want a hug. \quad {\small\color{plum}direct}}
+  \pair{Je voudrais un c\^{a}lin.}
+       {I would like a hug. \quad {\small\color{plum}poli}}
+  \pair{J'aimerais\ldots}
+       {I would like\ldots}
+\end{itemize}
+\end{exbox}
+
+\begin{rulebox}
+le pr\'{e}sent \quad vs \quad le conditionnel\\[0.3em]
+{\small\texttt{je veux} = I want \qquad \texttt{je voudrais} = I would like}
+\end{rulebox}
+
+\vspace{0.7em}
+
+\section*{s'il te pla\^{\i}t}
+
+\begin{enbox}
+\textbf{s'il te pla\^{\i}t} = please\\[0.35em]
+verbe \textbf{vouloir} $\rightarrow$ \texttt{veux} ou \texttt{voudrais}\\
+\textit{I would want / like}
+\end{enbox}
+
+\section*{avoir peur de}
+
+\begin{center}
+{\large \textbf{avoir peur de} \quad {\color{noteblue}\textit{to be afraid / scared of}}}
+\end{center}
+
+\begin{exbox}
+\begin{itemize}[leftmargin=1.2em,itemsep=0.55em]
+  \pair{Elle a peur des araign\'{e}es.}
+       {She is afraid of spiders.}
+  \pair{J'ai peur de tomber.}
+       {I am afraid of falling.}
+  \pair{Je ne sais pas pourquoi.}
+       {I don't know why.}
+  \pair{J'ai peur de lui.}
+       {I am afraid of him.}
+  \pair{Elle a peur de M.\ Potier.}
+       {She is afraid of Mr.\ Potier.}
+  \pair{Il a peur d'Arthur.}
+       {He is afraid of Arthur.}
+\end{itemize}
+\end{exbox}
+
+\newpage
+
+\section*{avoir peur de --- exemples}
+
+\begin{exbox}
+\begin{itemize}[leftmargin=1.2em,itemsep=0.55em]
+  \pair{Tu as peur du noir ?}
+       {Are you afraid of the dark?}
+  \pair{Ils ont peur de la m\'{e}chante sorci\`{e}re.}
+       {They are afraid of the wicked witch.}
+  \pair{Mon chien a peur de l'orage.}
+       {My dog is scared of the thunder.}
+  \pair{Mon fr\`{e}re a peur des chiens.}
+       {My brother is scared of dogs.}
+  \pair{J'ai peur de me perdre.}
+       {I'm scared of getting lost.\\
+        \vocab{perdre}{lost / losing your way}}
+\end{itemize}
+\end{exbox}
+
+\vspace{0.4em}
+
+\begin{exbox}
+\begin{itemize}[leftmargin=1.2em,itemsep=0.55em]
+  \pair{Vous avez peur d'\'{e}chouer.}
+       {You are afraid to fail.}
+  \pair{Ils ont peur de prendre le train tous seuls.}
+       {They are scared of taking the train on their own.}
+\end{itemize}
+\end{exbox}
+
+\begin{enbox}
+\vocab{prendre le train}{taking / boarding the train}\\[0.25em]
+\vocab{tous seuls}{on their own}\\[0.25em]
+\vocab{toujours}{always}\\[0.25em]
+\vocab{nos voisins}{our neighbours}\\[0.25em]
+nous avons souvent peur d'eux \quad \vocab{souvent}{often}
+\end{enbox}
+
+\vspace{1.2em}
+
+\begin{center}
+{\color{plum}\small fin du cahier \textbullet{} notes d'ao\^{u}t 2026}
+\end{center}
+
+\end{document}

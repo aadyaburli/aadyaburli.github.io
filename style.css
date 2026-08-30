@@ -25,6 +25,7 @@
 a,
 .entry-card,
 .back-link,
+.gn-downloads a,
 .wallpaper-swatch,
 .wallpaper-icon-btn,
 .side-nav a {
@@ -380,6 +381,44 @@ body {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: rgba(40, 24, 16, 0.38);
+}
+
+.gn-downloads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 16px;
+}
+
+.gn-downloads a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(40, 24, 16, 0.14);
+  background: rgba(255, 250, 243, 0.78);
+  color: var(--text-primary);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.gn-downloads a:hover {
+  background: #fffaf3;
+}
+
+.gn-paper-latex {
+  padding: 0;
+  min-height: 0;
+  background-image: none;
+  background-color: #f6efe4;
+}
+
+.gn-paper-latex .gn-slot {
+  min-height: 0;
 }
 
 .side-nav-tile-fr {
