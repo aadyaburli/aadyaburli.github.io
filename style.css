@@ -26,6 +26,7 @@ a,
 .entry-card,
 .back-link,
 .gn-downloads a,
+.topbar-fr,
 .wallpaper-swatch,
 .wallpaper-icon-btn,
 .side-nav a {
@@ -466,6 +467,26 @@ body[data-wallpaper="glass"] .site-bg::after {
 .topbar-links {
   display: flex;
   gap: 14px;
+}
+
+.topbar-fr {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.topbar-fr img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.entry-card .tag-icon {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+  vertical-align: -3px;
+  margin-right: 2px;
 }
 
 .wallpaper-page {
