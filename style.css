@@ -475,36 +475,33 @@ body[data-wallpaper="glass"] .site-bg::after {
   top: 16px;
   right: 16px;
   z-index: 60;
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   padding: 0;
-  border: 0.5px solid rgba(255, 255, 255, 0.55);
+  border: none;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(14px) saturate(160%);
-  -webkit-backdrop-filter: blur(14px) saturate(160%);
-  box-shadow: 0 6px 18px rgba(40, 16, 60, 0.14);
+  background: #191414;
+  box-shadow: 0 6px 18px rgba(40, 16, 60, 0.18);
   display: grid;
   place-items: center;
-  color: #6e6e73;
+  color: #b3b3b3;
   transition: color 0.15s ease, background 0.15s ease, transform 0.15s ease;
 }
 
 .spotify-sound-toggle:hover {
-  transform: scale(1.04);
-  background: rgba(255, 255, 255, 0.88);
+  transform: scale(1.05);
+  color: #fff;
 }
 
 .spotify-sound-toggle.is-on {
-  color: #1db954;
-  background: rgba(255, 255, 255, 0.92);
+  background: #1db954;
+  color: #fff;
 }
 
 .spotify-sound-toggle .spotify-sound-icon {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   display: block;
-  fill: currentColor;
 }
 
 .spotify-sound-toggle .spotify-sound-icon path {
@@ -515,15 +512,16 @@ body[data-wallpaper="glass"] .site-bg::after {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 26px;
-  height: 2px;
-  margin-left: -13px;
+  width: 28px;
+  height: 2.5px;
+  margin-left: -14px;
   margin-top: -1px;
-  background: #1d1d1f;
+  background: #fff;
   border-radius: 1px;
   transform: rotate(-40deg);
-  opacity: 0.85;
+  opacity: 0.95;
   pointer-events: none;
+  box-shadow: 0 0 0 1px #191414;
 }
 
 .spotify-sound-toggle.is-on .spotify-sound-slash {
