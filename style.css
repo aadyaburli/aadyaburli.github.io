@@ -28,7 +28,8 @@ a,
 .gn-downloads a,
 .wallpaper-swatch,
 .wallpaper-icon-btn,
-.side-nav a {
+.side-nav a,
+.spotify-sound-toggle {
   cursor: url("/assets/bubble-cursor.png") 12 12, url("/assets/bubble-cursor-32.png") 16 16, pointer;
 }
 
@@ -466,6 +467,71 @@ body[data-wallpaper="glass"] .site-bg::after {
 .topbar-links {
   display: flex;
   gap: 14px;
+}
+
+/* Spotify background sound — fixed top-right icon toggle */
+.spotify-sound-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 60;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0.5px solid rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  box-shadow: 0 6px 18px rgba(40, 16, 60, 0.14);
+  display: grid;
+  place-items: center;
+  color: #6e6e73;
+  transition: color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+}
+
+.spotify-sound-toggle:hover {
+  transform: scale(1.04);
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.spotify-sound-toggle.is-on {
+  color: #1db954;
+}
+
+.spotify-sound-toggle .spotify-sound-icon {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+  display: block;
+}
+
+.spotify-sound-toggle .spotify-sound-slash {
+  position: absolute;
+  width: 22px;
+  height: 1.5px;
+  background: currentColor;
+  border-radius: 1px;
+  transform: rotate(-32deg);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.spotify-sound-toggle.is-on .spotify-sound-slash {
+  display: none;
+}
+
+.spotify-embed-host {
+  /* off-screen but real-sized so Spotify can still stream audio */
+  position: fixed;
+  left: -400px;
+  top: 0;
+  width: 300px;
+  height: 80px;
+  overflow: hidden;
+  opacity: 0.02;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .wallpaper-page {
