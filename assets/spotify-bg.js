@@ -1,5 +1,7 @@
 (function () {
-  var TRACK_URI = "spotify:track:1NG8X5dUOwVTuMbgZyEl3A"; // La Petite Fille De La Mer — Vangelis
+  // La Petite Fille De La Mer — Vangelis (remastered)
+  var TRACK_URI = "spotify:track:3uNFRvQVEIEsQgHdZFw6Dk";
+  var TRACK_URL = "https://open.spotify.com/track/3uNFRvQVEIEsQgHdZFw6Dk";
   var PREF_KEY = "aadya-spotify-sound";
 
   var controller = null;
@@ -35,24 +37,31 @@
     button.title = on ? "sound on" : "sound off";
   }
 
+  function tryPlay() {
+    if (!controller || !ready) return;
+    try {
+      controller.play();
+      playing = true;
+      setUi(true);
+    } catch (err) {
+      playing = false;
+      setUi(false);
+    }
+  }
+
   function play() {
     wantPlay = true;
     setPrefer(true);
     setUi(true);
-    if (ready && controller) {
-      try {
-        controller.play();
-        playing = true;
-      } catch (err) {}
-    }
+    if (ready) tryPlay();
   }
 
   function pause() {
     wantPlay = false;
     setPrefer(false);
-    setUi(false);
     playing = false;
-    if (ready && controller) {
+    setUi(false);
+    if (controller && ready) {
       try {
         controller.pause();
       } catch (err) {}
@@ -60,8 +69,19 @@
   }
 
   function toggle() {
-    if (playing || (wantPlay && ready)) pause();
-    else play();
+    if (playing || (wantPlay && ready && playing)) {
+      pause();
+      return;
+    }
+    if (wantPlay && playing) {
+      pause();
+      return;
+    }
+    if (playing) {
+      pause();
+    } else {
+      play();
+    }
   }
 
   function ensureDom() {
@@ -73,10 +93,13 @@
     button.className = "spotify-sound-toggle";
     button.innerHTML =
       '<svg class="spotify-sound-icon" viewBox="0 0 24 24" aria-hidden="true">' +
-      '<path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>' +
+      '<path fill="currentColor" d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>' +
       "</svg>" +
       '<span class="spotify-sound-slash" aria-hidden="true"></span>';
-    button.addEventListener("click", toggle);
+    button.addEventListener("click", function () {
+      if (playing) pause();
+      else play();
+    });
     document.body.appendChild(button);
     setUi(false);
 
@@ -102,30 +125,31 @@
   function onReady(IFrameAPI) {
     var element = document.getElementById("spotify-embed");
     if (!element) return;
+
     IFrameAPI.createController(
       element,
       { uri: TRACK_URI, width: 300, height: 80 },
       function (EmbedController) {
         controller = EmbedController;
+
+        try {
+          EmbedController.loadUri(TRACK_URI);
+        } catch (err) {}
+
         EmbedController.addListener("ready", function () {
           ready = true;
-          if (wantPlay) {
-            try {
-              EmbedController.play();
-              playing = true;
-              setUi(true);
-            } catch (err) {}
-          }
+          if (wantPlay) tryPlay();
         });
+
         EmbedController.addListener("playback_update", function (e) {
           if (!e || !e.data) return;
           playing = !e.data.isPaused;
-          setUi(playing);
-          // soft loop: restart near the end
+          if (wantPlay) setUi(playing);
           if (
+            wantPlay &&
             !e.data.isPaused &&
             e.data.duration > 0 &&
-            e.data.position >= e.data.duration - 800
+            e.data.position >= e.data.duration - 900
           ) {
             try {
               EmbedController.seek(0);
@@ -146,9 +170,16 @@
     onReady(IFrameAPI);
   };
 
-  // Remember preference visually; browsers still require a click to start audio.
-  if (preferOn()) {
+  // Visual hint only — browsers block autoplay until a click.
+  if (preferOn() && button) {
     button.classList.add("is-wants-sound");
     button.title = "sound off — click to play";
   }
+
+  // Expose track link for debugging / fallback
+  window.AadyaSpotify = {
+    trackUrl: TRACK_URL,
+    play: play,
+    pause: pause,
+  };
 })();

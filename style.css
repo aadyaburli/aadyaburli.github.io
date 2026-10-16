@@ -497,23 +497,32 @@ body[data-wallpaper="glass"] .site-bg::after {
 
 .spotify-sound-toggle.is-on {
   color: #1db954;
+  background: rgba(255, 255, 255, 0.92);
 }
 
 .spotify-sound-toggle .spotify-sound-icon {
   width: 22px;
   height: 22px;
-  fill: currentColor;
   display: block;
+  fill: currentColor;
+}
+
+.spotify-sound-toggle .spotify-sound-icon path {
+  fill: currentColor;
 }
 
 .spotify-sound-toggle .spotify-sound-slash {
   position: absolute;
-  width: 22px;
-  height: 1.5px;
-  background: currentColor;
+  left: 50%;
+  top: 50%;
+  width: 26px;
+  height: 2px;
+  margin-left: -13px;
+  margin-top: -1px;
+  background: #1d1d1f;
   border-radius: 1px;
-  transform: rotate(-32deg);
-  opacity: 0.9;
+  transform: rotate(-40deg);
+  opacity: 0.85;
   pointer-events: none;
 }
 
@@ -522,14 +531,15 @@ body[data-wallpaper="glass"] .site-bg::after {
 }
 
 .spotify-embed-host {
-  /* off-screen but real-sized so Spotify can still stream audio */
+  /* keep a real-sized player; clip it so only the icon control shows */
   position: fixed;
-  left: -400px;
-  top: 0;
+  right: 16px;
+  bottom: 16px;
   width: 300px;
   height: 80px;
   overflow: hidden;
-  opacity: 0.02;
+  clip-path: inset(0 0 0 0);
+  opacity: 0;
   pointer-events: none;
   z-index: -1;
 }
