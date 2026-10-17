@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>learning log — aadya</title>
-  <link rel="stylesheet" href="style.css?v=22" />
+  <link rel="stylesheet" href="style.css?v=23" />
 </head>
 <body>
   <div class="site-bg" aria-hidden="true"></div>
@@ -37,43 +37,64 @@
 
     <div class="topbar">
       <a href="index.html">aadya — personal log</a>
-            <span class="topbar-links">
+      <span class="topbar-links">
         <span>learning log</span>
         <a href="french.html">french log</a>
         <a href="art.html">art</a>
         <a href="wallpaper.html">wallpaper</a>
       </span>
-        <a href="french.html">french log</a>
-        <a href="wallpaper.html">wallpaper</a>
-      </span>
     </div>
 
-    <div class="hero">
-      <h1>learning log</h1>
-      <p>notes on what i'm figuring out — newest at the top</p>
+    <div class="notebook" data-notebook>
+      <button
+        type="button"
+        class="notebook-cover"
+        data-notebook-open
+        aria-expanded="false"
+        aria-controls="learning-entries"
+      >
+        <img
+          src="/assets/learning/campus-cover.jpg"
+          alt="Campus notebook cover — click to open the learning log"
+          width="928"
+          height="1200"
+        />
+        <span class="notebook-hint">click to open</span>
+      </button>
+
+      <div class="notebook-inside" id="learning-entries" hidden>
+        <div class="hero">
+          <h1>learning log</h1>
+          <p>notes on what i'm figuring out — newest at the top</p>
+        </div>
+
+        <!--
+          to add a note: copy a .log-note block and paste it at the top of the list
+        -->
+        <div class="log-list">
+
+          <article class="log-note">
+            <div class="tag">note 001</div>
+            <h2>started this</h2>
+            <div class="date">august 2026</div>
+            <p>
+              a place for the learning, separate from the personal entries.
+              school, design, building things — whatever i'm in the middle of.
+            </p>
+          </article>
+
+        </div>
+
+        <button type="button" class="notebook-close" data-notebook-close>
+          close notebook
+        </button>
+        <a class="back-link" href="index.html">&larr; back to all entries</a>
+      </div>
     </div>
-
-    <!--
-      to add a note: copy a .log-note block and paste it at the top of the list
-    -->
-    <div class="log-list">
-
-      <article class="log-note">
-        <div class="tag">note 001</div>
-        <h2>started this</h2>
-        <div class="date">august 2026</div>
-        <p>
-          a place for the learning, separate from the personal entries.
-          school, design, building things — whatever i'm in the middle of.
-        </p>
-      </article>
-
-    </div>
-
-    <a class="back-link" href="index.html">&larr; back to all entries</a>
 
   </div>
   <script src="/assets/bg.js"></script>
   <script src="/assets/spotify-bg.js"></script>
+  <script src="/assets/learning-notebook.js"></script>
 </body>
 </html>
