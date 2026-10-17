@@ -144,6 +144,54 @@ body {
   margin-top: 4px;
 }
 
+/* art log — ibispaint speedpaints */
+.art-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-bottom: 8px;
+}
+
+.art-piece {
+  margin: 0;
+}
+
+.art-piece .art-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 0.5px solid rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 24px rgba(40, 16, 60, 0.12);
+}
+
+.art-piece figcaption {
+  padding: 10px 4px 2px;
+}
+
+.art-piece .tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.art-piece .title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.art-piece .desc {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
 /* entry grid on the homepage */
 .entry-grid {
   display: grid;
